@@ -13,6 +13,7 @@ document.getElementById('buttonCombo').onclick = function getTacoAndBeer() {
 //complete data stream		
 	const data = await response.json();
 	const {tacoName} = data;
+	console.log(data.base_layer.name)	
 //display in browser as text		
 	document.getElementById("viewTaco").innerHTML = ("Taco: " + data.base_layer.name);	
 	}
@@ -38,6 +39,8 @@ fetch("https://api.punkapi.com/v2/beers/random")
 	}
 
 //Save Favorites
+localStorage.getItem("beer", "data.base_layer.name");
+
 
 
 
