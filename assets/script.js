@@ -23,6 +23,12 @@ document.getElementById('saveTacoFaves').onclick = function myFaveTaco() {
 // autopopulate favorite Taco from API data	
 	document.getElementById("FavoriteTaco").innerHTML = ("Favorite Taco: " + data.base_layer.name);
 }		
+
+//save fave Tacos to local storage
+window.localStorage.setItem("myFaveTacos", data.base_layer.name);
+//return fave Tacos from local storage
+window.localStorage.getItem("myFaveTacos");		
+
 	}
 
 getTaco();
@@ -48,14 +54,21 @@ document.getElementById('saveBeerFaves').onclick = function myFaveBeer() {
 	document.getElementById("FavoriteBeer").innerHTML = ("Favorite Beer: " + beer);
 }
 
+//save fave Beer to local storage
+window.localStorage.setItem("myFaveBeer", beer);
+//return fave Tacos from local storage
+window.localStorage.getItem("myFaveBeer");	
+
 })
 	
 	}
 
-//Save Favorites
-
-//localStorage.getItem("beer", "data.base_layer.name");
-
+//Show me what is in local storage
+console.log(localStorage)
+//Clear Local Storage
+document.getElementById('clear').onclick = function myFaveBeer() {
+	window.localStorage.clear();
+}
 
 
 
