@@ -8,7 +8,8 @@
 	<link rel="stylesheet" href="assets/normalize.css">  
     <link rel="stylesheet" href="assets/style.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -16,41 +17,52 @@
 	 <div class="columns central is-desktop">
   <div class="column is-full has-background-success">
 	  <h1>TACOS AND BEER!</h1>
-	  <div class="background-photo">
-	  <img style="width: 100%;" src="assets/happy_friends.jpg" alt="Happy Friends">
-	  </div>
+	
+	  <img style="width: 100%;" src="assets/pub.jpg" alt="Happy Friends">
+
 		 <h2>A generator that suggests excellent taco and beer pairings.<br>
 	  If you like the suggested combo, save it to your favorites! </h2>
 	  <br>
 		 <button id="buttonCombo" class="button is-ghost">Make Suggestion!</button>
 		 </div>
    </div>
-
-  <div class="column is-three-fifths">
+ 
+   
+	<img class="float-right-lg" src="assets/beer.jpg" alt="delish_tacos">  
+   <img class="float-right-lg" src="assets/delish_tacos.jpg" alt="delish_tacos">
+   
+  <div class="column">
 	   <!-- Beer  will display here -->
-	  <h3 style="margin-left: 5%;"><i class="fas fa-beer"></i> <span id="viewBeer"> Beer:</span></h3>
+	  <h3 style="margin-left: 5%;"><i class="fas fa-beer"></i> <span id="beerName"> Beer Name:</span></h3>
+	<br>
+	  <h3 style="margin-left: 5%;"><i class="fas fa-beer"></i> <span id="beerDescription"> Description of this beer:</span></h3>
                 <br/>
 	  </div>
+
+	 
+
+    <div  class="column">
+		<h3 style="margin-left: 5%;" class="container"><i class="fas fa-utensils"></i> <span id = "tacoName">Taco: </h3>
+	  <!-- Taco will display here --> 
   </div>
-  <div class="columns is-desktop">
-    <div  class="column is-three-fifths">
-		<h3 style="margin-left: 5%;" class="container"><i class="fas fa-utensils"></i> <span id = "viewTaco">Taco: </h3>
-	  <!-- Taco will display here -->
-	  </div>
-    <div class="column">
-		 <button id="saveTacoFaves" class="button is-success">Add Taco to favorites</button>
-		<button id="saveBeerFaves" class="button is-success">Add Beer to favorites</button>
-	  </div>
-    <div class="column">
-	  <button id="clear" class="button is-info">Clear All Favorites</button>
-	  </div>
-  </div>
+
   <div class="column">
-	<h3 style="margin-left: 1%;" class="container" id="FavoriteTaco"><i class="fas fa-handshake"></i> <span id="FavoriteTaco">Favorite Taco: </span></h3>
-	<h3 style="margin-left: 1%;" class="container" id="FavoriteBeer"> <i class="fas fa-handshake" id="FavoriteTaco"></i> Favorite Beer: </h3>
+	<button style="margin-left: 2%;" id="saveFaves" class="button is-success">Add pairing to favorites</button>
+ </div>
+
+
+  <div class="column">
+	<h3 style="margin-left: 2%;" class="container" id="FavoriteBeer"> <i class="fas fa-handshake" id="FavoriteTaco"></i> SavedPairings </h3>
   </div>
-	  
-	  
+
+  <div class="buttons" id="savedPairings">
+
+</div>
+
+  <div class="column">
+	<button style="margin-left: 2%;" id="clear" class="button is-info">Clear All Favorites</button>
+	</div>
+
 	   <div class="column is-full has-background-success">
 	  <h4>Bulma by <a href="https://jgthms.com/">Jeremy Thomas</a>  &bull; Source code is licensed by <a href="https://opensource.org/licenses/mit-license.php">MIT</a>  &bull; Free use photos from <a href="https://unsplash.com/">Unpslash</a></h4>
 	  </div>

@@ -18,17 +18,33 @@ body {
   }
 }
 
+/* Float to the left on screens that are equal to or greater than 769px wide */
+@media (min-width: 600px) {
+	.float-right-lg {
+	  float: right;
+	  margin-right: 1%;
+	  max-height: 33vh;
+	}
+  }
 
 
+
+  
 .background-photo{
 	width: 100%;
+}
+
+.button:hover {
+	background-color: lightblue;
+	color: white;
 }
 
 h1 {
 	text-align: center;
 	color:white;
-	font-weight: 800;
-	font-size: 2.5em;
+	font-size: 4em;
+	font-family: 'Permanent Marker', cursive, sans-serif;
+	text-shadow: 2px 2px black;
 }
 
 h2 {
@@ -39,7 +55,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.75em;
+	font-size: 1.5em;
 }
 
 .is-ghost {
