@@ -1,0 +1,74 @@
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    
+  }
+}
+
+
+
+.background-photo{
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+	color:white;
+	font-weight: 800;
+	font-size: 2.5em;
+}
+
+h2 {
+	text-align: center;
+	font-size:2em;
+	color:white;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 1.75em;
+}
+
+.is-ghost {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#saveBeerFaves{
+	margin-top:2%;
+}
+
+.footer {
+	padding: 1%;
+}
+
+h4 {
+	text-align: center;
+	font-size:1em;
+	color:white;
+	font-weight: 400;
+}
+
+h4 link {
+	text-underline: none;
+	color: darkslategray;
+}
+
+h4 link hover {
+	text-underline: none;
+	color: darkslateblue;
+}

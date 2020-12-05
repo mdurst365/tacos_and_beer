@@ -12,9 +12,9 @@ document.getElementById('buttonCombo').onclick = function getTacoAndBeer() {
 	const response = await fetch(api_url);
 //complete data stream		
 	const data = await response.json();
-	const {tacoName} = data;
+	const { name, description, image_url } = data.base_layer;
 //test in console	
-	console.log(data.base_layer.name)	
+	console.log(name)	
 //display in browser as text		
 	document.getElementById("viewTaco").innerHTML = ("Taco: " + data.base_layer.name);
 
@@ -23,6 +23,12 @@ document.getElementById('saveTacoFaves').onclick = function myFaveTaco() {
 // autopopulate favorite Taco from API data	
 	document.getElementById("FavoriteTaco").innerHTML = ("Favorite Taco: " + data.base_layer.name);
 }		
+
+//save fave Tacos to local storage
+window.localStorage.setItem("myFaveTacos", data.base_layer.name);
+//return fave Tacos from local storage
+window.localStorage.getItem("myFaveTacos");		
+
 	}
 
 getTaco();
@@ -36,17 +42,36 @@ getTaco();
 fetch("https://api.punkapi.com/v2/beers/random")
     .then(response => response.json())
     .then(beers => {
-	const beer = beers[0].name;
+	const beer = beers[0];
 	//test in console
-	console.log(beer)
+	console.log(beer.name)
 	//display in browser as text
-	document.getElementById("viewBeer").innerHTML = ("Beer: " + beer);
+	document.getElementById("viewBeer").innerHTML = ("Beer: " + beer.name);
 	
 	//onclick event for add to favorites button
+	const beerFavesArray = []
+	//put the first beer in your object
+	const beerObject = {
+		name: beer.name,
+		description: beer.description,
+		image: beer.image_url,
+	}
 document.getElementById('saveBeerFaves').onclick = function myFaveBeer() {
 // autopopulate favorite Beer from API data	
-	document.getElementById("FavoriteBeer").innerHTML = ("Favorite Beer: " + beer);
+	beerFavesArray.push(beerObject);
+	console.log(beerObject)
+	window.localStorage.setItem("favBeers", JSON.stringify(beerFavesArray))
+	getListofBeers();
+	document.getElementById("FavoriteBeer").innerHTML = ("Favorite Beer: " + beer.name);
 }
+
+
+//add more beer to the array
+
+//save fave Beer to local storage
+window.localStorage.setItem("myFaveBeer", beer);
+//return fave Tacos from local storage
+window.localStorage.getItem("myFaveBeer");	
 
 })
 	
@@ -60,6 +85,9 @@ document.getElementById('clear').onclick = function myFaveBeer() {
 }
 
 
-
+function getListofBeers() {
+	const beerArray = JSON.parse(window.localStorage.getItem("favBeers"));
+	console.log(beerArray)
+}
 
 
