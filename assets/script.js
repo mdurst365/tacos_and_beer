@@ -96,7 +96,7 @@ function savePairing() {
 // add saved pairing to UI
 function addSavedPairing(pairingBtn) {
     var showPairing = $("#savedPairings");
-    var showPairingBtn = $("<button>").attr({"type": "button", "class": "button is-small is-success is-light is-outlined","style":"margin-top: 5px; margin-left: 2%; width: 30%;"});
+    var showPairingBtn = $("<button>").attr({"type": "button", "class": "button is-small is-success is-light is-outlined",});
     showPairingBtn.text(pairingBtn.beer.beerName + " Beer" + " & " + pairingBtn.taco.tacoName);
     showPairingBtn.click(function() {
         showBeer(pairingBtn.beer);

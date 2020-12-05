@@ -28,6 +28,11 @@ body {
   }
 
 
+#savedPairings {
+	margin-top: 5px; 
+	margin-left: 2%; 
+	width: 33%;
+}
 
   
 .background-photo{
