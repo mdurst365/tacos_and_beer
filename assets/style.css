@@ -45,17 +45,19 @@ body {
 }
 
 h1 {
+	font-family: 'Permanent Marker', cursive, sans-serif;
 	text-align: center;
 	color:white;
 	font-size: 4em;
-	font-family: 'Permanent Marker', cursive, sans-serif;
 	text-shadow: 2px 2px black;
 }
 
 h2 {
+	font-family: 'Permanent Marker', cursive, sans-serif;
 	text-align: center;
 	font-size:2em;
 	color:white;
+	text-shadow: 2px 2px black;
 	font-weight: 400;
 }
 
