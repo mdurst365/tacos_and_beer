@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Taco Adventure</title>
+    <title>Tacos and Beer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 	<link rel="stylesheet" href="assets/normalize.css">  
     <link rel="stylesheet" href="assets/style.css">
@@ -20,9 +20,8 @@
 	
 	  <img style="width: 100%;" src="assets/pub.jpg" alt="Happy Friends">
 
-		 <h2>A dynamic generator that suggests excellent taco and beer pairings.<br>
-	  If you like the suggested combo, save it to your favorites! </h2>
-	  <br>
+	  <h2 style="margin-bottom: 1%;">A dynamic generator that suggests random excellent taco and beer pairings.<br></h2>
+	 
 		 <button id="buttonCombo" class="button is-ghost">Make Suggestion!</button>
 		 </div>
    </div>
@@ -33,41 +32,61 @@
    
   <div class="column">
 	   <!-- Beer  will display here -->
-	  <h3 style="margin-left: 5%;"><i class="fas fa-beer"></i> <span id="beerName"> Beer Name:</span></h3>
+	  <h3 style="margin-left: 1%;"><i class="fas fa-beer"></i> <span id="beerName"> Beer Name:</span></h3>
 	<br>
-	  <h3 style="margin-left: 5%;"><i class="fas fa-beer"></i> <span id="beerDescription"> Description of this beer:</span></h3>
+	  <h3 style="margin-left: 1%;"><i class="fas fa-beer"></i> <span id="beerDescription"> Description of this beer:</span></h3>
                 <br/>
 	  </div>
 
 	 
-
+	   <!-- Taco will display here --> 
     <div  class="column">
-		<h3 style="margin-left: 5%;" class="container"><i class="fas fa-utensils"></i> <span id = "tacoName">Taco: </h3>
-	  <!-- Taco will display here --> 
+		<h3 style="margin-left: 1%;" class="container"><i class="fas fa-utensils"></i> <span id = "tacoName">Taco: </span> </h3>
   </div>
-
-  <div class="column">
-	<button style="margin-left: 2%;" id="saveFaves" class="button is-success">Add pairing to favorites</button>
+	  
+<div class="pushDown">&nbsp;</div>
+  <!--
+  <div class="column"> 
+	<button style="margin-left: 2%;" id="saveBeerLocal" class="button is-success">Add to favorites</button>
  </div>
 
 
+  <div class="column"> 
+	<button style="margin-left: 2%;" id="saveBeerFaves" class="button is-success">Add to Favorite Beers:</button>
+	<p style="margin-left: 5%;" id="FavoriteBeer"></p>
+ </div>
+
+ <div class="column"> 
+	<button style="margin-left: 2%;" id="saveTacoFaves" class="button is-success">Taco Favorites:</button>
+ </div>
+
+ <!--  
+  <div class="column"> 
+	<button style="margin-left: 2%;" id="saveFaves" class="button is-success">Add pairing to favorites</button>
+ </div>
+
   <div class="column">
-	<h3 style="margin-left: 2%;" class="container" id="FavoriteBeer"> <i class="fas fa-handshake" id="FavoriteTaco"></i> SavedPairings </h3>
+	<h3 style="margin-left: 2%;" class="container"> <i class="fas fa-handshake"></i> SavedPairings </h3>
   </div>
 
+Saved pairings will display here 
   <div class="buttons" id="savedPairings">
+	 
 
 </div>
 
   <div class="column">
 	<button style="margin-left: 2%;" id="clear" class="button is-info">Clear All Favorites</button>
 	</div>
-
+-->
 	   <div class="column is-full has-background-success">
 	  <h4>Bulma by <a href="https://jgthms.com/">Jeremy Thomas</a>  &bull; Source code is licensed by <a href="https://opensource.org/licenses/mit-license.php">MIT</a>  &bull; Free use photos from <a href="https://unsplash.com/">Unpslash</a></h4>
 	  </div>
 	  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/fetch.js" defer></script>
+<!-- coding 
 <script type="text/javascript" src="assets/script.js"></script>
+out-->
 	</body>
 </html>
