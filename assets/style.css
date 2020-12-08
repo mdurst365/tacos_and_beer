@@ -23,7 +23,7 @@ body {
 	.float-right-lg {
 	  float: right;
 	  margin-right: 1%;
-	  max-height: 33vh;
+	  max-height: 30vh;
 	}
   }
 
@@ -86,7 +86,7 @@ h3 {
 }
 
 .footer {
-	padding: 1%;
+  padding: 1%;
 }
 
 h4 {
@@ -104,4 +104,8 @@ h4 link {
 h4 link hover {
 	text-underline: none;
 	color: darkslateblue;
+}
+
+.pushDown {
+	margin-bottom: 5%;
 }
